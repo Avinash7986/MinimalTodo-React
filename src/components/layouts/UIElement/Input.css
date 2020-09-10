@@ -1,0 +1,70 @@
+/* .form-group {
+  padding: 10px;
+} */
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  /* color: #19191d; */
+  color: #0c2146;
+}
+
+.form-control {
+  display: block;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  padding: 8px 10px;
+  margin-top: 0.125rem;
+  margin-bottom: 0.125rem;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.027em;
+  box-shadow: 0 0 0 1px #9dc2ff;
+  color: #0c2146;
+}
+
+.textarea {
+  resize: none;
+  font-size: 1.2rem;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 2px #4f91ff;
+}
+
+.error-message {
+  /* background-color: #e02d1b; */
+  background: #e74a3b;
+  margin: 5px 2px;
+  padding: 10px;
+  color: white;
+  border-radius: 4px;
+  position: relative;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: var(--greyShadow4dp);
+  line-height: 1.2;
+  width: fit-content;
+}
+
+.error-message::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 6px;
+  border: 10px solid;
+  border-color: transparent transparent #e74a3b transparent;
+}
+
+.form-control.error {
+  /* box-shadow: 0 0 0 1px #f44336; */
+  box-shadow: 0 0 0 1px #e74a3b;
+}
+
+.form-control.error:focus {
+  box-shadow: 0 0 0 2px #e74a3b;
+}

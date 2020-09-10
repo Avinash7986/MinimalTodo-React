@@ -1,0 +1,45 @@
+.btn {
+  color: #f5f8ff;
+  background: #8040ff;
+  /* background: #2979ff; */
+  box-shadow: var(--greyShadow4dp);
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+  padding: 0.8rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  margin: 0.6rem;
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 0.975rem;
+  line-height: 1rem;
+  text-transform: capitalize;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.5s;
+  -webkit-user-select: none;
+}
+
+.btn:hover,
+.btn:focus {
+  /* background: #2264d1; */
+  background: #2979ff;
+  box-shadow: var(--greyShadow8dp);
+}
+
+.btn:disabled,
+.btn:hover:disabled,
+.btn:active:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+.btn.outline {
+  /* background: #f8f8f8;
+  color: black; */
+  border: 1px solid #2979ff;
+  background: transparent;
+  color: black;
+}

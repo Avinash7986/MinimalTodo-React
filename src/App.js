@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import TodoState from './context/todoState';
+import TodoList from './components/todo/TodoList';
+import Backdrop from './components/layouts/BackDrop';
+import ModalForm from './components/layouts/ModalForm';
+import TodoSearch from './components/todo/TodoSearch';
+import Button from './components/layouts/UIElement/Button';
 
-function App() {
+const App = () => {
+  const [open, setOpen] = useState(false);
+
+  const toggleModal = () => {
+    setOpen(!open);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TodoState>
+      <div className='container'>
+        {open && <Backdrop toggle={toggleModal} />}
+        {open && <ModalForm toggle={toggleModal} />}
+
+        <div className='todo__wrapper'>
+          <div className='content__area'>
+            <Button onClick={toggleModal}>Add Task</Button>
+            <TodoSearch />
+          </div>
+
+          <TodoList toggle={toggleModal} />
+        </div>
+      </div>
+    </TodoState>
   );
-}
+};
 
 export default App;
